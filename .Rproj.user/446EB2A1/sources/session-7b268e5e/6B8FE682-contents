@@ -23,7 +23,6 @@ Querying_EPA_Data/
 │   ├── 01_Query_Facility_Data.Rmd        # Query and process facility data
 │   ├── 02_Query_Allowance_Holdings.Rmd   # Query and process allowance holdings data
 │   ├── 03_Query_Annual_Emissions.Rmd       # Query and process annual emissions data
-│   ├── 04_Map_Facilities.Rmd               # Map facility locations using Leaflet
 │   └── Functions/                         # Custom functions for reuse
 │         └── Helper_Functions.R          # Helper functions (e.g., API calls, data cleaning)
 │
