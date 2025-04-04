@@ -1,0 +1,253 @@
+---
+title: "**Querying EPA CAMD Emissions Data**"
+author: "Robert J. Dellinger"
+date: "2025"
+output:
+  html_document:
+    fig_caption: true
+    css: default
+header-includes:
+  # Set page margins using geometry package
+  - \usepackage{geometry}
+  - \geometry{left=1in, right=1in, top=1in, bottom=1in}
+  
+  # Enable double-spacing for readability
+  - \usepackage{setspace}
+  - \doublespacing
+  
+  # Customize the header and footer using fancyhdr
+  - \usepackage{fancyhdr}
+  - \pagestyle{fancy}
+  - \fancyhead[L]{}
+  - \fancyhead[C]{Scientific Hypothesis and Preliminary Data Explorations}
+  - \fancyhead[R]{}
+  - \fancyfoot[L]{}
+  - \fancyfoot[C]{\thepage}
+  - \fancyfoot[R]{}
+  - \renewcommand{\headrulewidth}{0.2pt}
+  - \renewcommand{\footrulewidth}{0pt}
+---
+
+------------------------------------------------------------------------
+
+# Overview
+
+This document outlines our method for querying annual emissions data from the EPA CAMD API for each state over the period 1995–2024. We construct a query using pipe-separated values for years and state codes, handle pagination to retrieve all records, and save each state's aggregated data as a CSV file.
+
+## Methods
+
+1. **Query Construction and Metadata Retrieval:**  
+   - Build a query with years (1995–2024) and state codes.
+   - Use an initial GET request to determine the total number of records from the `x-total-count` header.
+
+2. **Pagination:**  
+   - Calculate the total number of pages (with 100 records per page) needed to fetch all data.
+   - Loop through pages, appending each page's results until all data are retrieved.
+
+3. **Data Output:**  
+   - Combine the pages into a single data frame.
+   - Save the combined data for each state to a CSV file.
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Load the necessary libraries
+library(httr)
+library(jsonlite)
+library(data.table)
+library(janitor)
+library(tidyverse)
+library(here)
+```
+
+# Querying Hourly Emissions Data
+
+This section demonstrates how to use the streaming services API to get hourly emissions data. This API is suitable for continuous data streams and avoids the need to page through results.
+
+
+```{r hourly-emissions, echo=TRUE, message=TRUE, warning=FALSE}
+
+# Set your API key
+# api_key <- "YOUR_API_KEY_HERE"
+selected_states <- c("CA")
+
+# API info
+apiUrlBase <- "https://api.epa.gov/easey"
+
+# streaming hourly emissions endpoint url
+hourlyEmissionsUrl <- paste0(apiUrlBase,"/streaming-services/emissions/apportioned/hourly?API_KEY=",api_key)
+
+# api parameters for the streaming emissions/apportioned/hourly endpoint
+query <- list(beginDate = "2024-01-01",
+              endDate = "2024-01-31",
+              stateCode = paste0(selected_states, collapse = '|'))
+
+if (as.Date(query$endDate) - as.Date(query$beginDate) > 31) {
+  warning("The request you're making could be too large for the streaming services API and may result in a bad request. Please consider using the bulk data api endpoint instead. An example can be found in the bulk_data_demo.py file.")
+}
+
+# making get request using the emissions/apportioned/hourly endpoint
+res = GET(hourlyEmissionsUrl, query = query)
+# printing the response error message if the response is not successful
+if (res$status_code > 399) {
+  errorFrame <- fromJSON(rawToChar(res$content))
+  stop(paste("Error Code:",errorFrame$error$code,errorFrame$error$message))
+}
+
+fieldMappings <- fromJSON(res$headers$`x-field-mappings`)
+print(fieldMappings)
+
+# convert response to a data frame
+hourlyEmissData <- fromJSON(rawToChar(res$content))
+
+# print head of dataframe
+print(head(hourlyEmissData))
+```
+
+# Querying Daily Emissions Data
+
+```{r hourly-emissions, echo=TRUE, message=TRUE, warning=FALSE}
+
+# Set your API key
+# api_key <- "YOUR_API_KEY_HERE"
+selected_states <- c("CA")
+
+# API info
+apiUrlBase <- "https://api.epa.gov/easey"
+
+# streaming hourly emissions endpoint url
+dailyEmissionsUrl <- paste0(apiUrlBase,"/streaming-services/emissions/apportioned/daily?API_KEY=",api_key)
+
+# api parameters for the streaming emissions/apportioned/daily endpoint
+query <- list(beginDate = "2024-01-01",
+              endDate = "2024-01-31",
+              stateCode = paste0(selected_states, collapse = '|'))
+
+if (as.Date(query$endDate) - as.Date(query$beginDate) > 31) {
+  warning("The request you're making could be too large for the streaming services API and may result in a bad request. Please consider using the bulk data api endpoint instead. An example can be found in the bulk_data_demo.py file.")
+}
+
+# making get request using the emissions/apportioned/daily endpoint
+res = GET(dailyEmissionsUrl, query = query)
+# printing the response error message if the response is not successful
+if (res$status_code > 399) {
+  errorFrame <- fromJSON(rawToChar(res$content))
+  stop(paste("Error Code:",errorFrame$error$code,errorFrame$error$message))
+}
+
+fieldMappings <- fromJSON(res$headers$`x-field-mappings`)
+print(fieldMappings)
+
+# convert response to a data frame
+dailyEmissData <- fromJSON(rawToChar(res$content))
+
+# print head of dataframe
+print(head(dailyEmissData))
+
+monthlyEmissData <- dailyEmissData %>% 
+  mutate(year = year(date),
+         month = month(date),
+         day = day(date)) %>%
+  group_by(facilityName, facilityId, stateCode, year, month) %>%
+  summarise(total_so2_mass = sum(so2Mass, na.rm = TRUE),
+            total_no2_mass = sum(noxMass, na.rm = TRUE),
+            total_co2_mass = sum(co2Mass, na.rm = TRUE))
+
+# print head of dataframe
+print(head(monthlyEmissData))
+```
+
+# Querying Annual Emissions Data 
+
+Downloading annual emissions data for each state from 1995 to 2024 from the EPA CAMD API. The data includes information on the Acid Rain Program, Cross-State Air Pollution Rule, and Clean Air Interstate Rule. The data is saved in CSV format for each state and data between 1995 and 2024 is included. The code handles pagination to ensure all data is retrieved, and it prints the total number of records for each state. The API key must be set before running the code.
+
+```{r annual-emissions, echo=TRUE, message=TRUE, warning=FALSE}
+
+# Set your API key
+# api_key <- "YOUR_API_KEY_HERE"
+
+# API base URLs
+apiUrlBase <- "https://api.epa.gov/easey"
+# Vector of all U.S. state codes that can be queried (modify if needed)
+selected_states <- c("AL", "AR", "AZ", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "IL", "IN", "IA", "ID", "KS", "KY", "LA",
+"ME", "MD", "MA", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NM", "NV", "NJ", "NM", "NY", "OK", "OH", "OR", "PA",
+"RI", "SC", "SD", "TN", "TX", "UT", "WV", "WI", "WY", "VA", "WA", "WY", "PR")
+
+# downloading all data from the acid rain program, cross state air pollution rule, and the clean air interstate rule
+years <- 1995:2024
+
+# Annual emissions endpoint URL
+annualEmissionsPageUrl <- paste0(apiUrlBase, "/emissions-mgmt/emissions/apportioned/annual?API_KEY=", api_key)
+
+# Loop through each selected state
+for (st in selected_states) {
+  message("Processing state: ", st)
+  
+  # Build query parameters with pipe-separated years
+  query <- list(
+    year = paste(years, collapse = '|'),
+    stateCode = st,
+    page = 1,
+    perPage = 100
+  )
+  
+  # Make an initial GET request to determine the total number of records
+  res <- GET(annualEmissionsPageUrl, query = query)
+  if (res$status_code > 399) {
+    errorFrame <- fromJSON(rawToChar(res$content))
+    stop(paste("Error Code:", errorFrame$error$code, errorFrame$error$message))
+  }
+  
+  totalRowsAvailableForQuery <- as.numeric(res$headers$`x-total-count`)
+  message("Total records for ", st, ": ", totalRowsAvailableForQuery)
+  
+  # Calculate total pages required
+  totalPages <- ceiling(totalRowsAvailableForQuery / query$perPage)
+  message("Total pages to fetch: ", totalPages)
+  
+  # Initialize a list to store each page's data
+  allData <- list()
+  page <- 1
+  
+  # Loop through pages until all pages are fetched
+  while (page <= totalPages) {
+    query$page <- page
+    res <- GET(annualEmissionsPageUrl, query = query)
+    
+    if (res$status_code > 399) {
+      errorFrame <- fromJSON(rawToChar(res$content))
+      stop(paste("Error Code:", errorFrame$error$code, errorFrame$error$message))
+    }
+    
+    dataPage <- fromJSON(rawToChar(res$content))
+    # If no rows are returned, break the loop
+    if (nrow(dataPage) == 0) break
+    
+    allData[[page]] <- dataPage
+    message("Fetched page ", page)
+    page <- page + 1
+    
+    # After each GET request in your loop
+    Sys.sleep(1)  # pause for 1 second
+  }
+  
+  # Combine all pages into a single data frame
+  combinedAnnualEmissData <- bind_rows(allData)
+  print(combinedAnnualEmissData)
+  
+  # Write the data to a CSV file for the current state
+  outputFile <- here("Data", "Raw", "EPA_CAMD_Annual_Emissions", 
+                     paste0("EPA_CAMD_Annual_Emissions_", st, "_1995_2024.csv"))
+  write_csv(combinedAnnualEmissData, outputFile)
+  message("Saved file: ", outputFile)
+}
+
+```
+
+
+# Citations
+
+United States Environmental Protection Agency (EPA). “Clean Air Markets Program Data.” Washington, DC: Office of Atmospheric Protection, Clean Air Markets Division. Available from EPA’s Air Markets Program Data web site: https://campd.epa.gov/.
+
+

@@ -1,0 +1,79 @@
+---
+title: "Mapping EPA CAMD Facilities"
+author: "Robert J. Dellinger"
+date: "2025"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(here)
+library(dplyr)
+
+
+```
+
+# Introduction
+
+This document maps facility locations from the EPA CAMD facility data using the **leaflet** package. The data are loaded from a CSV file that was created from our API queries. Each facility is marked on an interactive map with a popup that displays key information such as the facility name, facility ID, county, and state.
+
+## Methods
+
+Our facility dataset from the EPA CAMD API spans multiple years (1980–2024) and includes records at the unit level. Since each facility may have multiple units and be recorded in multiple years, we first aggregate the data by facility. For each facility we:
+  
+- Group the data by facility ID and facility name.
+- Summarize the number of operating units, the earliest commercial operation date, and create a summary of the recorded years.
+- Use the first available coordinates for mapping.
+
+# Load Libraries and Data
+
+```{r load-data}
+
+
+```
+
+
+# Visualizing EPA CAMD Facility Allowances Over Time
+
+```{r}
+# Load the allowance holdings data
+frs_allowance_holdings <- read_csv(here::here("Data", "Raw", "EPA_CAMD_Allowance_Holdings", "CAMD_account_holdings_bulk.csv"))
+str(frs_allowance_holdings)
+summary(frs_allowance_holdings)
+
+# Aggregate total allowances by vintage year for the "ARP" program
+allowance_over_time <- frs_allowance_holdings %>%
+  filter(program_code %in% c("ARP")) %>%
+  group_by(allowance_vintage_year) %>% 
+  summarise(total_allowances = sum(allowance_block_total, na.rm = TRUE)) %>%
+  arrange(allowance_vintage_year)
+
+# Create a publication-quality bar graph
+ggplot(allowance_over_time, aes(x = factor(allowance_vintage_year), y = total_allowances)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  scale_y_continuous(labels = comma) +
+  labs(
+    title = "EPA Total Allowances Over Time (ARP Program)",
+    x = "Vintage Year",
+    y = "Total Allowances"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold", hjust = 0.5),
+    axis.title = element_text(face = "bold"),
+    axis.text.x = element_text(angle = 45, size = 5, hjust = 1),
+    axis.text.y = element_text(size = 12)
+  )
+```
+
+# Conclusion
+
+The above interactive map displays facility locations from the EPA CAMD dataset. You can zoom, pan, and click on markers to view additional facility details.
+
+---
+
+*Data Source: United States Environmental Protection Agency (EPA), Clean Air Markets Program Data. For more details, see [EPA CAMPD](https://campd.epa.gov/).*
+  
+This document is ready for publication. Adjust any parameters or paths as needed for your project.

@@ -1,0 +1,6 @@
+"0",""
+"0","# convert response to a data frame"
+"0","dailyEmissData <- fromJSON(rawToChar(res$content))"
+"0",""
+"0","# print head of dataframe"
+"0","print(head(dailyEmissData))"

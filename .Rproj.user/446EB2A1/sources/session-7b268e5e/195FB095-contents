@@ -1,0 +1,169 @@
+---
+title: "**Querying EPA CAMD Allowance Data**"
+author: "Robert J. Dellinger"
+date: "2025"
+output:
+  html_document:
+    fig_caption: true
+    css: default
+header-includes:
+  # Set page margins using geometry package
+  - \usepackage{geometry}
+  - \geometry{left=1in, right=1in, top=1in, bottom=1in}
+  
+  # Enable double-spacing for readability
+  - \usepackage{setspace}
+  - \doublespacing
+  
+  # Customize the header and footer using fancyhdr
+  - \usepackage{fancyhdr}
+  - \pagestyle{fancy}
+  - \fancyhead[L]{}
+  - \fancyhead[C]{Scientific Hypothesis and Preliminary Data Explorations}
+  - \fancyhead[R]{}
+  - \fancyfoot[L]{}
+  - \fancyfoot[C]{\thepage}
+  - \fancyfoot[R]{}
+  - \renewcommand{\headrulewidth}{0.2pt}
+  - \renewcommand{\footrulewidth}{0pt}
+---
+
+------------------------------------------------------------------------
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Load the necessary libraries
+library(httr)
+library(jsonlite)
+library(data.table)
+library(janitor)
+library(tidyverse)
+library(here)
+library(scales)
+```
+
+# Overview
+
+This document explains our method for querying allowance holdings data from the EPA CAMD API. We retrieve bulk file metadata, filter for Allowance files, download and clean the data, and combine it into a single dataset that is saved as a CSV file.
+
+More information about the CAMD Allowance data and the EPA CAMD can be found at the [EPA CAMD allowance documentation](https://www.epa.gov/power-sector/allowance-data).
+
+## Methods
+
+1. **Metadata Retrieval:**  
+   - Send a GET request to the CAMD bulk files endpoint.
+   - Parse the returned JSON and confirm available file types.
+
+2. **Data Filtering and Download:**  
+   - Filter the metadata for files where `dataType == "Allowance"`.
+   - Download each file and clean the column names using the `janitor` package.
+   - Combine all downloaded files into one dataset.
+
+3. **Output:**  
+   - Save the combined dataset as `CAMD_account_holdings_bulk.csv`.
+
+# Querying Allowance Holdings Data
+
+This section queries the EPA CAMD API for allowance holdings data, specifically focusing on the Allowance Holdings files. The data is downloaded and saved in CSV format.
+
+```{r allowance, echo=TRUE, message=TRUE, warning=FALSE}
+
+# Set your API key
+# api_key <- "YOUR_API_KEY_HERE"
+
+# API base URLs
+apiUrlBase <- "https://api.epa.gov/easey"
+bucketUrlBase <- "https://api.epa.gov/easey/bulk-files/"
+servicesUrl <- paste0(apiUrlBase, "/camd-services/bulk-files?API_KEY=", api_key)
+
+# GET request to fetch bulk file metadata
+res <- GET(servicesUrl)
+if (res$status_code > 399) {
+  errorFrame <- fromJSON(rawToChar(res$content))
+  stop(paste("Error Code:", errorFrame$error$code, errorFrame$error$message))
+}
+
+# Parse the JSON response and format lastUpdated
+bulkFiles <- fromJSON(rawToChar(res$content))
+bulkFiles$lastUpdated <- strftime(bulkFiles$lastUpdated, "%Y-%m-%dT%H:%M:%S")
+
+# Print available file types
+print(unique(bulkFiles$metadata$dataType))
+
+# Filter for Allowance Holdings files
+accountFiles <- bulkFiles[bulkFiles$metadata$dataType == "Allowance", ]
+
+# Summary messages
+message("Number of Allowance Holdings files to download: ", nrow(newAccountFiles))
+message("Total size of Allowance Holdings files: ", sum(newAccountFiles$megaBytes, na.rm = TRUE), " MB")
+
+# Set download directory
+downloadDir <- here("Data", "Raw", "EPA_CAMD_Allowance_Holdings")
+if (!dir.exists(downloadDir)) dir.create(downloadDir, recursive = TRUE)
+
+# Initialize an empty data table
+accountDataBulk <- data.table()
+
+# Loop through each new file
+if (nrow(newAccountFiles) > 0) {
+  for (i in 1:nrow(newAccountFiles)) {
+    s3Path <- newAccountFiles[i, "s3Path"]
+    filename <- newAccountFiles[i, "filename"]
+    fileURL <- paste0(bucketUrlBase, s3Path)
+    
+    message("Downloading file: ", filename, " from URL: ", fileURL)
+    
+    # Optionally save to disk:
+    # GET(fileURL, write_disk(file.path(downloadDir, filename), overwrite = TRUE))
+    
+    # Read data directly into R and clean column names
+    tempData <- fread(fileURL, showProgress = TRUE)
+    tempData <- clean_names(tempData)
+    
+    accountDataBulk <- rbind(accountDataBulk, tempData, fill = TRUE)
+  }
+  # Optionally sort by year if the column exists
+  if ("year" %in% names(accountDataBulk)) {
+    accountDataBulk <- accountDataBulk %>% arrange(year)
+  }
+}
+
+print(accountDataBulk)
+
+# Save the combined data to a CSV file
+outputPath <- file.path(downloadDir, "CAMD_account_holdings_bulk.csv")
+write_csv(accountDataBulk, outputPath)
+
+```
+
+# Allowance Holdings Over Time
+
+This section summarizes the total allowances held by facilities over time, specifically for the ARP program to visualize trends in allowance holdings.
+
+```{r}
+# Summarize unique facilities per year across all data (using facility_data and its year field)
+unique_facilities_year <- facilityData %>%
+  group_by(year) %>%
+  summarise(unique_facilities = n_distinct(facility_id), .groups = "drop") %>%
+  arrange(year)
+
+ggplot(unique_facilities_year, aes(x = factor(year), y = unique_facilities)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  scale_y_continuous(labels = comma) +
+  labs(title = "Unique Facilities by Year",
+       x = "Year",
+       y = "Number of Unique Facilities") +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold", hjust = 0.5),
+    axis.title = element_text(face = "bold"),
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+```
+
+# Citations
+
+United States Environmental Protection Agency (EPA). “Clean Air Markets Program Data.” Washington, DC: Office of Atmospheric Protection, Clean Air Markets Division. Available from EPA’s Air Markets Program Data web site: https://campd.epa.gov/.
+

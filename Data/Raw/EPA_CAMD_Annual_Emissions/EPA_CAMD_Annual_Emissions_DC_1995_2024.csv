@@ -1,0 +1,147 @@
+stateCode,facilityName,facilityId,unitId,associatedStacks,year,countOpTime,sumOpTime,grossLoad,steamLoad,so2Mass,so2Rate,co2Mass,co2Rate,noxMass,noxRate,heatInput,primaryFuelInfo,secondaryFuelInfo,unitType,so2ControlInfo,noxControlInfo,pmControlInfo,hgControlInfo,programCodeInfo
+DC,Benning Generation Station,603,15,NA,1995,NA,NA,NA,NA,451,NA,91251,NA,138,NA,1140760,Residual Oil,NA,Tangentially-fired,NA,NA,NA,NA,ARP
+DC,Benning Generation Station,603,15,NA,1996,NA,NA,NA,NA,367.9,NA,13435,NA,59,NA,475732,Residual Oil,NA,Tangentially-fired,NA,NA,NA,NA,ARP
+DC,Benning Generation Station,603,15,NA,1997,206,198,26028.5,NA,139.897,1.0163,26408.225,0.081,38.946,0.224,326282.6,Residual Oil,NA,Tangentially-fired,NA,NA,NA,NA,ARP
+DC,Benning Generation Station,603,15,NA,1998,796,769.25,95548.75,NA,459.055,0.6582,100869.225,0.081,147.709,0.2091,1246221.425,Residual Oil,NA,Tangentially-fired,NA,NA,NA,NA,ARP
+DC,Benning Generation Station,603,15,NA,1999,921,888.25,111184.25,NA,756.988,0.7622,138713.675,0.081,228.29,0.2366,1713776.2,Residual Oil,NA,Tangentially-fired,NA,NA,NA,NA,ARP
+DC,Benning Generation Station,603,15,NA,2000,792,754.05,64981.69,NA,390.915,0.765,71146.141,0.074,101.161,0.1907,914609.478,Residual Oil,NA,Tangentially-fired,NA,NA,NA,NA,ARP
+DC,Benning Generation Station,603,15,NA,2001,406,382.97,41561.7,NA,203.918,0.6233,45724.205,0.081,59.975,0.1875,564916.543,Residual Oil,NA,Tangentially-fired,NA,NA,NA,NA,"ARP, OTC"
+DC,Benning Generation Station,603,15,NA,2002,860,815.75,101806.24,NA,462.232,0.5448,116779.692,0.0808,153.157,0.1838,1443677.57,Residual Oil,NA,Tangentially-fired,NA,NA,NA,NA,"ARP, OTC"
+DC,Benning Generation Station,603,15,NA,2003,310,292.37,37996.38,NA,169.81,0.526,43341.919,0.0797,51.347,0.1675,536776.937,Residual Oil,NA,Tangentially-fired,NA,NA,NA,NA,"ARP, NBP"
+DC,Benning Generation Station,603,15,NA,2004,149,123.23,7880.72,NA,42.1,0.3382,11955.832,0.081,12.36,0.0955,147711.61,Residual Oil,NA,Tangentially-fired,NA,NA,NA,NA,"ARP, NBP"
+DC,Benning Generation Station,603,15,NA,2005,591,561.74,99772.38,NA,439.052,0.6272,98182.214,0.081,124.678,0.1793,1213040.058,Residual Oil,NA,Tangentially-fired,NA,NA,NA,NA,"ARP, NBP"
+DC,Benning Generation Station,603,15,NA,2006,160,150.81,23571.45,NA,110.195,0.7108,22489.911,0.0809,31.305,0.2055,277159.606,Residual Oil,NA,Tangentially-fired,NA,NA,NA,NA,"ARP, NBP"
+DC,Benning Generation Station,603,15,NA,2007,117,105.48,10200.39,NA,41.528,0.4633,10261.004,0.081,13.017,0.1354,126466.563,Residual Oil,NA,Tangentially-fired,NA,NA,NA,NA,"ARP, NBP"
+DC,Benning Generation Station,603,15,NA,2008,246,233.46,30504.2,NA,108.707,0.5957,28195.273,0.081,49.458,0.2445,347463.283,Residual Oil,NA,Tangentially-fired,NA,NA,NA,NA,"ARP, CAIRNOX, CAIROS, NBP"
+DC,Benning Generation Station,603,15,NA,2009,98,94.66,9382.1,NA,34.15,0.3991,9876.707,0.0824,24.909,0.2667,121721.997,Residual Oil,NA,Tangentially-fired,NA,NA,NA,NA,"ARP, CAIRNOX, CAIROS, CAIRSO2"
+DC,Benning Generation Station,603,15,NA,2010,1290,1273.21,110830.98,NA,479.918,0.6161,117765.686,0.0812,196.27,0.259,1451357.617,Residual Oil,NA,Tangentially-fired,NA,NA,NA,NA,"ARP, CAIRNOX, CAIROS, CAIRSO2"
+DC,Benning Generation Station,603,15,NA,2011,792,779.2,95467.31,NA,501.711,0.7395,94341.725,0.0812,136.19,0.2058,1162616.074,Residual Oil,NA,Tangentially-fired,NA,NA,NA,NA,"ARP, CAIRNOX, CAIROS, CAIRSO2"
+DC,Benning Generation Station,603,15,NA,2012,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,Residual Oil,NA,Tangentially-fired,NA,NA,NA,NA,"ARP, CAIRNOX, CAIROS, CAIRSO2"
+DC,Benning Generation Station,603,16,NA,1995,NA,NA,NA,NA,676,NA,127210,NA,219,NA,1582717,Residual Oil,NA,Dry bottom wall-fired boiler,NA,NA,NA,NA,ARP
+DC,Benning Generation Station,603,16,NA,1996,NA,NA,NA,NA,377.4,NA,33609,NA,69,NA,414134,Residual Oil,NA,Dry bottom wall-fired boiler,NA,NA,NA,NA,ARP
+DC,Benning Generation Station,603,16,NA,1997,299,291.25,39339,NA,285.598,3.7505,26345.6,0.081,56.527,0.4234,325465.35,Residual Oil,NA,Dry bottom wall-fired boiler,NA,NA,NA,NA,ARP
+DC,Benning Generation Station,603,16,NA,1998,1137,1091.5,144256.75,NA,755.729,0.6909,157592.55,0.081,270.515,0.2323,1947019.125,Residual Oil,NA,Dry bottom wall-fired boiler,NA,NA,NA,NA,ARP
+DC,Benning Generation Station,603,16,NA,1999,953,918.5,118144,NA,675.263,0.7488,128721.825,0.081,218.802,0.2329,1590331.5,Residual Oil,NA,Dry bottom wall-fired boiler,NA,NA,NA,NA,ARP
+DC,Benning Generation Station,603,16,NA,2000,1018,975.19,88186.53,NA,566.76,0.7777,102039.725,0.0743,172.123,0.223,1310018.981,Residual Oil,NA,Dry bottom wall-fired boiler,NA,NA,NA,NA,ARP
+DC,Benning Generation Station,603,16,NA,2001,1071,1046.15,97404.2,NA,550.1,0.7008,118852.679,0.081,174.74,0.217,1468401.93,Residual Oil,NA,Dry bottom wall-fired boiler,NA,NA,NA,NA,"ARP, OTC"
+DC,Benning Generation Station,603,16,NA,2002,1033,989.71,139869.26,NA,624.934,0.5401,162653.266,0.0809,256.629,0.2261,2009931.297,Residual Oil,NA,Dry bottom wall-fired boiler,NA,NA,NA,NA,"ARP, OTC"
+DC,Benning Generation Station,603,16,NA,2003,226,210.23,26610.13,NA,115.716,0.4469,28547.883,0.0728,45.45,0.1841,370310.473,Residual Oil,NA,Dry bottom wall-fired boiler,NA,NA,NA,NA,"ARP, NBP"
+DC,Benning Generation Station,603,16,NA,2004,280,256.28,22128.53,NA,107.946,0.4098,29457.218,0.081,40.986,0.1596,363924.747,Residual Oil,NA,Dry bottom wall-fired boiler,NA,NA,NA,NA,"ARP, NBP"
+DC,Benning Generation Station,603,16,NA,2005,457,442.6,83057.3,NA,395.202,0.6059,89023.919,0.081,151.238,0.2352,1099886.215,Residual Oil,NA,Dry bottom wall-fired boiler,NA,NA,NA,NA,"ARP, NBP"
+DC,Benning Generation Station,603,16,NA,2006,220,212.51,37328.03,NA,200.328,0.6901,40089.65,0.081,68.68,0.2328,494066.164,Residual Oil,NA,Dry bottom wall-fired boiler,NA,NA,NA,NA,"ARP, NBP"
+DC,Benning Generation Station,603,16,NA,2007,460,441.25,62280.24,NA,277.046,0.5378,67645.558,0.0812,109.151,0.1992,833589.624,Residual Oil,NA,Dry bottom wall-fired boiler,NA,NA,NA,NA,"ARP, NBP"
+DC,Benning Generation Station,603,16,NA,2008,219,212.1,35693.78,NA,151.805,0.6095,38687.658,0.081,60.288,0.2085,476811.085,Residual Oil,NA,Dry bottom wall-fired boiler,NA,NA,NA,NA,"ARP, CAIRNOX, CAIROS, NBP"
+DC,Benning Generation Station,603,16,NA,2009,175,167.92,16567.4,NA,268.166,1.611,18157.902,0.0809,31.713,0.1968,223790.382,Residual Oil,NA,Dry bottom wall-fired boiler,NA,NA,NA,NA,"ARP, CAIRNOX, CAIROS, CAIRSO2"
+DC,Benning Generation Station,603,16,NA,2010,1269,1249.52,107247.11,NA,393.833,0.5527,102999.371,0.081,176.885,0.2511,1269330.665,Residual Oil,NA,Dry bottom wall-fired boiler,NA,NA,NA,NA,"ARP, CAIRNOX, CAIROS, CAIRSO2"
+DC,Benning Generation Station,603,16,NA,2011,390,380.61,40933.47,NA,221.394,0.6532,42305.54,0.0811,68.152,0.2044,521366.595,Residual Oil,NA,Dry bottom wall-fired boiler,NA,NA,NA,NA,"ARP, CAIRNOX, CAIROS, CAIRSO2"
+DC,Benning Generation Station,603,16,NA,2012,37,35.79,2910.69,NA,21.592,0.665,3602.282,0.081,6.084,0.1932,44397.848,Residual Oil,NA,Dry bottom wall-fired boiler,NA,NA,NA,NA,"ARP, CAIRNOX, CAIROS, CAIRSO2"
+DC,Buzzard Point,604,E1,NA,2001,77,77,899,NA,NA,NA,NA,NA,9.218,1.1999,15363.6,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,E1,NA,2002,231,231,2575,NA,NA,NA,NA,NA,15.676,1.2001,26126.9,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,E2,NA,2001,77,77,839,NA,NA,NA,NA,NA,8.579,1.1999,14297.5,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,E2,NA,2002,232,232,2567,NA,NA,NA,NA,NA,15.532,1.2006,25886.3,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,E3,NA,2001,77,77,820,NA,NA,NA,NA,NA,8.349,1.1998,13915.3,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,E3,NA,2002,230,230,2329,NA,NA,NA,NA,NA,14.285,1.1998,23810.6,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,E4,NA,2001,75,75,845,NA,NA,NA,NA,NA,8.695,1.1999,14490.8,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,E4,NA,2002,228,228,2267,NA,NA,NA,NA,NA,14.098,1.2005,23497.5,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,E5,NA,2001,65,65,705,NA,NA,NA,NA,NA,5.606,1.2001,9343.6,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,E5,NA,2002,230,230,2223,NA,NA,NA,NA,NA,13.838,1.2,23061.8,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,E6,NA,2001,83,83,908,NA,NA,NA,NA,NA,9.263,1.2,15438.7,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,E6,NA,2002,233,233,2504,NA,NA,NA,NA,NA,15.013,1.2004,25020,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,E7,NA,2001,61,61,679,NA,NA,NA,NA,NA,6.855,1.2002,11425.2,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,E7,NA,2002,234,234,2564,NA,NA,NA,NA,NA,15.654,1.2002,26091,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,E8,NA,2001,78,78,890,NA,NA,NA,NA,NA,9.15,1.1999,15250.7,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,E8,NA,2002,236,236,2492,NA,NA,NA,NA,NA,15.264,1.2004,25438.3,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,W10,NA,2001,66,66,700,NA,NA,NA,NA,NA,5.59,1.1997,9316,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,W10,NA,2002,226,226,2471,NA,NA,NA,NA,NA,15.448,1.2002,25748.1,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,W11,NA,2001,67,67,675,NA,NA,NA,NA,NA,5.608,1.1997,9346.9,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,W11,NA,2002,209,209,2262,NA,NA,NA,NA,NA,13.912,1.2003,23187.6,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,W12,NA,2001,66,66,773,NA,NA,NA,NA,NA,6.171,1.2001,10285.6,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,W12,NA,2002,225,225,2610,NA,NA,NA,NA,NA,16.251,1.2004,27083.9,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,W13,NA,2001,66,66,758,NA,NA,NA,NA,NA,5.963,1.2001,9938.1,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,W13,NA,2002,225,225,2583,NA,NA,NA,NA,NA,15.875,1.2002,26458,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,W14,NA,2001,66,66,774,NA,NA,NA,NA,NA,6.171,1.1998,10285.7,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,W14,NA,2002,225,225,2549,NA,NA,NA,NA,NA,15.767,1.2004,26278.2,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,W15,NA,2001,66,66,729,NA,NA,NA,NA,NA,5.804,1.1999,9674.2,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,W15,NA,2002,225,225,2433,NA,NA,NA,NA,NA,14.943,1.2001,24906.8,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,W16,NA,2001,66,66,709,NA,NA,NA,NA,NA,5.6,1.2,9333,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,W16,NA,2002,224,224,2448,NA,NA,NA,NA,NA,15.011,1.2006,25017.3,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,W9,NA,2001,65,65,629,NA,NA,NA,NA,NA,5.085,1.1994,8474.4,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,Buzzard Point,604,W9,NA,2002,224,224,2276,NA,NA,NA,NA,NA,15.078,1.2001,25131.2,Diesel Oil,NA,Combustion turbine,NA,NA,NA,NA,OTC
+DC,GSA Central Heating,880004,1,NA,2001,5859,5855.67,NA,695454.64,NA,NA,NA,NA,31.069,0.0961,665673.02,Pipeline Natural Gas,NA,Dry bottom wall-fired boiler,NA,Low NOx Burner Technology (Dry Bottom only),NA,NA,OTC
+DC,GSA Central Heating,880004,1,NA,2002,5945,5923.94,NA,530008.8,NA,NA,NA,NA,31.419,0.1162,510674.713,Pipeline Natural Gas,NA,Dry bottom wall-fired boiler,NA,Low NOx Burner Technology (Dry Bottom only),NA,NA,OTC
+DC,GSA Central Heating,880004,2,NA,2001,2409,2395.73,NA,201047.21,NA,NA,NA,NA,10.81,0.0879,230764.671,Pipeline Natural Gas,NA,Dry bottom wall-fired boiler,NA,Low NOx Burner Technology (Dry Bottom only),NA,NA,OTC
+DC,GSA Central Heating,880004,2,NA,2002,3518,3503.18,NA,309519.91,NA,NA,NA,NA,20.323,0.1108,337909.448,Pipeline Natural Gas,NA,Dry bottom wall-fired boiler,NA,Low NOx Burner Technology (Dry Bottom only),NA,NA,OTC
+DC,GSA Central Heating,880004,3,NA,2001,1536,1532.9,NA,299055.26,NA,NA,NA,NA,28.09,0.1489,376556.117,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,OTC
+DC,GSA Central Heating,880004,3,NA,2002,3055,3050,NA,545498.84,NA,NA,NA,NA,33.205,0.1118,563876.8,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,OTC
+DC,GSA Central Heating,880004,3,NA,2003,5942,5923.39,NA,1255847.89,NA,NA,NA,NA,84.547,0.127,1279781.751,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,NBP
+DC,GSA Central Heating,880004,3,NA,2004,3511,3489.54,NA,611743.15,NA,NA,NA,NA,61.452,0.1125,1090779.194,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,NBP
+DC,GSA Central Heating,880004,3,NA,2005,5034,5023.95,NA,916926.14,NA,NA,NA,NA,111.454,0.1928,1100328.076,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,NBP
+DC,GSA Central Heating,880004,3,NA,2006,4776,4761.82,NA,751203.63,NA,NA,NA,NA,60.978,0.1284,950021.244,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,NBP
+DC,GSA Central Heating,880004,3,NA,2007,2817,2807.46,NA,499153.2,NA,NA,NA,NA,44.168,0.1352,603257.152,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,NBP
+DC,GSA Central Heating,880004,3,NA,2008,1937,1930.74,NA,252991.53,NA,NA,NA,NA,26.094,0.1544,323321,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,NBP
+DC,GSA Central Heating,880004,3,NA,2009,3594,3584.21,NA,490564.61,NA,NA,NA,NA,75.178,0.2224,647609.891,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,3,NA,2010,3504,3499.63,NA,510905.35,NA,NA,NA,NA,41.869,0.1258,614198.772,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,3,NA,2011,2215,2199.32,NA,383644.02,NA,NA,NA,NA,44.011,0.1746,482067.636,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,3,NA,2012,675,669.51,NA,75814.15,NA,NA,NA,NA,8.767,0.1649,100599.769,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,3,NA,2013,1591,1587.31,NA,331294.63,NA,NA,NA,NA,31.546,0.1505,404216.745,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,3,NA,2014,978,975.89,NA,143155.04,NA,NA,NA,NA,14.983,0.1523,191031.023,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,3,NA,2015,586,583.76,NA,118408.95,NA,NA,NA,NA,12.138,0.161,147446.686,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,3,NA,2016,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,3,NA,2017,342,337.81,NA,17339.7,NA,NA,NA,NA,2.788,0.2665,20218.743,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,3,NA,2018,2872,2856.38,NA,456341.3,NA,NA,NA,NA,41.479,0.1598,509696.097,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,3,NA,2019,2536,2528.61,NA,362793.39,NA,NA,NA,NA,30.732,0.1381,416956.609,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,3,NA,2020,2152,2093.58,NA,274598.62,NA,NA,NA,NA,20.431,0.1212,317006.6,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,3,NA,2021,1207,1177.02,NA,164467.16,NA,NA,NA,NA,11.598,0.116,190935.062,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,3,NA,2022,3558,3458.68,NA,515396.61,NA,NA,NA,NA,39.07,0.1273,575360.268,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,3,NA,2023,3587,3105.56,NA,359478.83,NA,NA,NA,NA,27.589,0.1171,403113.659,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,3,NA,2024,1906,1597.92,NA,194926.98,NA,NA,NA,NA,15.38,0.1075,239238.751,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,4,NA,2001,168,167.83,NA,27254.28,NA,NA,NA,NA,0.69,0.2704,5046.167,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,OTC
+DC,GSA Central Heating,880004,4,NA,2002,4652,4645.16,NA,849184.24,NA,NA,NA,NA,52.79,0.1465,711512.64,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,OTC
+DC,GSA Central Heating,880004,4,NA,2003,2240,2212.62,NA,435961.56,NA,NA,NA,NA,29.878,0.1458,397817.367,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,NBP
+DC,GSA Central Heating,880004,4,NA,2004,2592,2586.34,NA,519884.25,NA,NA,NA,NA,38.602,0.1445,517920.2,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,NBP
+DC,GSA Central Heating,880004,4,NA,2005,785,780.46,NA,129098.14,NA,NA,NA,NA,14.972,0.2038,148206.944,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,NBP
+DC,GSA Central Heating,880004,4,NA,2006,1540,1529.92,NA,182376.57,NA,NA,NA,NA,21.422,0.1953,214580.069,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,NBP
+DC,GSA Central Heating,880004,4,NA,2007,5338,5317.51,NA,767001.79,NA,NA,NA,NA,61.099,0.1379,857123.723,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,NBP
+DC,GSA Central Heating,880004,4,NA,2008,3139,3131.8,NA,486819.82,NA,NA,NA,NA,48.012,0.1738,544089.02,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,NBP
+DC,GSA Central Heating,880004,4,NA,2009,2485,2474.28,NA,279471.42,NA,NA,NA,NA,27.086,0.1658,319585.193,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,4,NA,2010,1330,1321.88,NA,155146.3,NA,NA,NA,NA,8.051,0.1319,122822.16,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,4,NA,2011,805,803.03,NA,91373.82,NA,NA,NA,NA,8.592,0.1555,107772.431,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,4,NA,2012,800,798.63,NA,101007.69,NA,NA,NA,NA,7.988,0.1328,115112.266,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,4,NA,2013,1196,1186.53,NA,205250.79,NA,NA,NA,NA,20.115,0.1635,238777.753,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,4,NA,2014,1874,1870.21,NA,328919.58,NA,NA,NA,NA,44.5,0.1389,655630.485,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,4,NA,2015,894,890.89,NA,172589.45,NA,NA,NA,NA,14.079,0.1433,200418.529,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,4,NA,2016,1197,1194.39,NA,195095.6,NA,NA,NA,NA,19.094,0.1735,212168.471,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,4,NA,2017,1380,1375.12,NA,162814.63,NA,NA,NA,NA,17.036,0.1933,180606.33,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,4,NA,2018,604,597.7,NA,73005.56,NA,NA,NA,NA,5.667,0.1403,84855.937,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,4,NA,2019,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,4,NA,2020,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,4,NA,2021,3,1.82,NA,0,NA,NA,NA,NA,0,0.276,0.728,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,4,NA,2022,244,239.04,NA,12922.47,NA,NA,NA,NA,0.007,0.1197,95.616,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,4,NA,2023,91,82.33,NA,5555.62,NA,NA,NA,NA,0.015,0.1049,202.352,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,4,NA,2024,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,NA,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,5,NA,2001,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Diesel Oil,NA,Dry bottom wall-fired boiler,NA,NA,NA,NA,OTC
+DC,GSA Central Heating,880004,5,NA,2002,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Diesel Oil,NA,Dry bottom wall-fired boiler,NA,NA,NA,NA,NA
+DC,GSA Central Heating,880004,5,NA,2003,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Diesel Oil,NA,Dry bottom wall-fired boiler,NA,NA,NA,NA,NA
+DC,GSA Central Heating,880004,5C,NA,2004,1992,1946.22,NA,69993.53,NA,NA,NA,NA,40.019,0.4336,180632.316,Pipeline Natural Gas,Diesel Oil,"Combustion turbine (Started Jul 01, 2004)",NA,Dry Low NOx Burners,NA,NA,NBP
+DC,GSA Central Heating,880004,5C,NA,2005,4973,4911.77,NA,237427.57,NA,NA,NA,NA,24.974,0.1065,473696.879,Pipeline Natural Gas,Diesel Oil,Combustion turbine,NA,Dry Low NOx Burners,NA,NA,NBP
+DC,GSA Central Heating,880004,5C,NA,2006,2781,2744.91,NA,104881.4,NA,NA,NA,NA,27.3,0.233,283440.526,Pipeline Natural Gas,Diesel Oil,Combustion turbine,NA,Dry Low NOx Burners,NA,NA,NBP
+DC,GSA Central Heating,880004,5C,NA,2007,3244,3204.68,NA,115335.8,NA,NA,NA,NA,22.72,0.1609,284233.172,Pipeline Natural Gas,Diesel Oil,Combustion turbine,NA,Dry Low NOx Burners,NA,NA,NBP
+DC,GSA Central Heating,880004,5C,NA,2008,6870,6823.61,NA,227768.05,NA,NA,NA,NA,106.666,0.3392,663016.787,Pipeline Natural Gas,Diesel Oil,Combustion turbine,NA,Dry Low NOx Burners,NA,NA,NBP
+DC,GSA Central Heating,880004,5C,NA,2009,5935,5913.87,NA,344354.23,NA,NA,NA,NA,199.622,0.4227,953662.853,Pipeline Natural Gas,Diesel Oil,Combustion turbine,NA,Dry Low NOx Burners,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,5C,NA,2010,7856,7833.12,NA,496014.42,NA,NA,NA,NA,91.739,0.1292,1358195.339,Pipeline Natural Gas,Diesel Oil,Combustion turbine,NA,Dry Low NOx Burners,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,5C,NA,2011,7464,7424.56,NA,523313.79,NA,NA,NA,NA,62.935,0.1121,1107478.842,Pipeline Natural Gas,Diesel Oil,Combustion turbine,NA,Dry Low NOx Burners,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,5C,NA,2012,7106,7077.42,NA,488592.8,NA,NA,NA,NA,73.111,0.1694,912537.89,Pipeline Natural Gas,Diesel Oil,Combustion turbine,NA,Dry Low NOx Burners,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,5C,NA,2013,7406,7350.37,NA,599072.71,NA,NA,NA,NA,44.429,0.0969,934805.833,Pipeline Natural Gas,Diesel Oil,Combustion turbine,NA,Dry Low NOx Burners,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,5C,NA,2014,7452,7418.24,NA,533733.94,NA,NA,NA,NA,48.394,0.1013,956646.579,Pipeline Natural Gas,Diesel Oil,Combustion turbine,NA,Dry Low NOx Burners,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,5C,NA,2015,6703,6656.1,NA,345027.27,NA,NA,NA,NA,40.569,0.1169,695076.848,Pipeline Natural Gas,Diesel Oil,Combustion turbine,NA,Dry Low NOx Burners,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,5C,NA,2016,7431,7389.26,NA,440010.13,NA,NA,NA,NA,48.965,0.1021,928351.755,Pipeline Natural Gas,Diesel Oil,Combustion turbine,NA,Dry Low NOx Burners,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,5C,NA,2017,6611,6541,NA,335974.76,NA,NA,NA,NA,46.884,0.1386,729141.783,Pipeline Natural Gas,Diesel Oil,Combustion turbine,NA,Dry Low NOx Burners,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,5C,NA,2018,7000,6915.37,NA,366285.03,NA,NA,NA,NA,48.419,0.1156,872455.027,Pipeline Natural Gas,Diesel Oil,Combustion turbine,NA,Dry Low NOx Burners,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,5C,NA,2019,6464,6409.74,NA,342564.3,NA,NA,NA,NA,45.284,0.0931,987107.145,Pipeline Natural Gas,Diesel Oil,Combustion turbine,NA,Dry Low NOx Burners,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,5C,NA,2020,6118,6050.7,NA,338588.14,NA,NA,NA,NA,45.372,0.1025,894309.097,Pipeline Natural Gas,Diesel Oil,Combustion turbine,NA,Dry Low NOx Burners,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,5C,NA,2021,7087,7057.56,NA,402102.04,NA,NA,NA,NA,50.711,0.0985,1034288.797,Pipeline Natural Gas,Diesel Oil,Combustion turbine,NA,Dry Low NOx Burners,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,5C,NA,2022,1790,1768.63,NA,64348.84,NA,NA,NA,NA,10.563,0.1031,204502.317,Pipeline Natural Gas,Diesel Oil,Combustion turbine,NA,Dry Low NOx Burners,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,5C,NA,2023,5186,5152.42,NA,207419.34,NA,NA,NA,NA,26.633,0.0947,581974.663,Pipeline Natural Gas,Diesel Oil,Combustion turbine,NA,Dry Low NOx Burners,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,5C,NA,2024,5953,5918.72,NA,282461.43,NA,NA,NA,NA,37.103,0.0939,787030.758,Pipeline Natural Gas,Diesel Oil,Combustion turbine,NA,Dry Low NOx Burners,NA,NA,SIPNOX
+DC,GSA Central Heating,880004,6,NA,2001,220,220,NA,14043,NA,NA,NA,NA,11.462,0.495,46464.1,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,Low NOx Burner Technology (Dry Bottom only),NA,NA,OTC
+DC,GSA Central Heating,880004,6,NA,2002,965,962.5,NA,120215.83,NA,NA,NA,NA,8.884,0.1302,134443.728,Pipeline Natural Gas,Diesel Oil,Dry bottom wall-fired boiler,NA,Low NOx Burner Technology (Dry Bottom only),NA,NA,OTC
