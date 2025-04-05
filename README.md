@@ -2,6 +2,8 @@
 
 # Querying EPA Data
 
+---
+
 ## Overview
 
 This repository contains a suite of reproducible scripts and tools to query, download, clean, and analyze emissions and compliance data from the U.S. Environmental Protection Agency’s **Clean Air Markets Division (CAMD)**. The tools are designed for use in R and leverage the official [EPA CAMD API](https://campd.epa.gov/) to retrieve structured datasets.
