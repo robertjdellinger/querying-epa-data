@@ -74,15 +74,13 @@ United States Environmental Protection Agency (EPA). “Power Sector Data.” Wa
 
 For more information on these data sources, visit the official [EPA CAMPD website](https://campd.epa.gov/).
 
-## Contact
-
-For questions or further information, please contact:
-
-**Robert J. Dellinger**  
-Ph.D. Student, Atmospheric & Oceanic Sciences, UCLA  
-Email: rjdellinger[at]ucla.edu  
-GitHub: [rob-dellinger](https://github.com/rob-dellinger)
-
 ---
 
-Feel free to modify the content above to match your repository details and workflow. This README provides a clear overview of the project structure, usage instructions, data sources, and contact information.
+### **Contact Information:**
+**Robert J. Dellinger**  
+**Ph.D. Student, Atmospheric & Oceanic Sciences, UCLA**  
+**rjdellinger[at]ucla.edu**  
+
+[![GitHub](https://img.shields.io/badge/GitHub-rob--dellinger-181717?logo=github&logoColor=white)](https://github.com/rob-dellinger)  
+
+---
